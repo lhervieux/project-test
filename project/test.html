@@ -1,0 +1,57 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" >
+        <title>Mon Site Web</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100" rel="stylesheet" type="text/css">
+        <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+        </script>
+    </head>
+    <body>            
+        <header>
+            <div class="conteneur">
+                <div class="haut-gauche">
+                    <a href="index.html">
+                        <h1>Nom Prenom</h1>
+                    </a>
+                    <h2><span>C</span>ommunication / <span>M</span>arketing / <span>D</span>igital</h2>
+                </div>
+                <div class="haut-droite">
+                    <a href="">Télécharger mon CV</a>
+                    <a href="">Partagez</a>
+                </div>
+                <div class="clear"></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="moncv.html">Mon CV</a></li>
+                        <li><a href="mesprojets.html">Nos Projets</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header> 
+        <section>
+            <div class="conteneur">
+                 <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+                    <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+                    <p><img id="output" width="200" /></p>
+            </div>
+        </section>    
+        <footer>
+            <div class="conteneur">
+                <a href="">Informations</a> -
+                <a href="">Mentions Légales</a> -
+                <a href="contact.php">Contact</a>
+                <br>
+                <p>© 2015 Conception et réalisation par Nom Prenom. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </body>
+</html>
